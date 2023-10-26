@@ -52,7 +52,7 @@ $$
 4. Output a deterministic policy, $\pi ≈ \pi*$: 
 
 $$
-\pi(s) = \argmax_a \sum s',r p(s', r|s, a)[r + \gamma V(s')]
+\pi(s)=\argmax_a \sum s',r p(s', r|s, a)[r + \gamma V(s')]
 $$
 
 Value iteration directly finds the optimal value function without having to maintain a policy. Once the optimal value function is found, the optimal policy can be derived from it.
