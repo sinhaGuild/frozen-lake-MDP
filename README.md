@@ -30,9 +30,8 @@ $$
 
 2. Policy Improvement: Update the policy based on the current value-function.
 
-$$
-\pi'(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
-$$
+$\pi'(s) = \argmax_a \sum s',r p(s', r|s, a)[r + \gamma V_{\pi}(s')]$
+
 These two steps are repeated until the policy converges, i.e., does not change between two consecutive iterations.
 
 **Value Iteration**
