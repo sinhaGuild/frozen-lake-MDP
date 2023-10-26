@@ -31,9 +31,7 @@ $$
 2. Policy Improvement: Update the policy based on the current value-function.
 
 $$
-
 \pi'(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
-
 $$
 These two steps are repeated until the policy converges, i.e., does not change between two consecutive iterations.
 
@@ -54,7 +52,7 @@ $$
 4. Output a deterministic policy, $\pi ≈ \pi*$: 
 
 $$
-π(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V(s')]
+\pi(s) = \argmax_a \sum s',r p(s', r|s, a)[r + \gamma V(s')]
 $$
 
 Value iteration directly finds the optimal value function without having to maintain a policy. Once the optimal value function is found, the optimal policy can be derived from it.
