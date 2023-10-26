@@ -25,12 +25,14 @@ Policy iteration consists of two steps: policy evaluation and policy improvement
 1. Policy Evaluation: For a given policy $\pi$, calculate the state-value function $V_{\pi}(s)$ for all states s ∈ S. The state-value function Vπ(s) is calculated as:
 
 $$
-    V_π(s) = \sum a∈A \pi(a|s) \sum s', r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
-$$
-2. Policy Improvement: Update the policy based on the current value-function.
+V_π(s) = \sum a∈A \pi(a|s) \sum s', r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
 $$
 
-    \pi'(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
+2. Policy Improvement: Update the policy based on the current value-function.
+
+$$
+
+\pi'(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V_{\pi}(s')]
 
 $$
 These two steps are repeated until the policy converges, i.e., does not change between two consecutive iterations.
@@ -43,16 +45,16 @@ Value iteration is a method of computing an optimal MDP policy and its value.
 
 2. Update the value function: For each state s ∈ S, perform the following update:
 
-    $$
-    V(s) = max_a ∑s',r p(s', r|s, a)[r + \gamma V(s')]
-    $$
+$$
+V(s) = max_a ∑s',r p(s', r|s, a)[r + \gamma V(s')]
+$$
 
 3. Check for convergence: Repeat step 2 until the value function converges, i.e., the maximum change in the value function is less than a small positive number ε.
 
-4. Output a deterministic policy, π ≈ π*: 
+4. Output a deterministic policy, $\pi ≈ \pi*$: 
 
-   $$
-    π(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V(s')]
-   $$
+$$
+π(s) = \argmax_{a} \sum s',r p(s', r|s, a)[r + \gamma V(s')]
+$$
 
 Value iteration directly finds the optimal value function without having to maintain a policy. Once the optimal value function is found, the optimal policy can be derived from it.
